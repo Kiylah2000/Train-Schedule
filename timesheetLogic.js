@@ -79,7 +79,7 @@ database.ref().on("child_added", function (childSnapshot) {
     var minutesAway = frequency - tRemainder;
 
    //next arrival time
-		var nextArrival = moment().add(minutesAway, "minutes").format('hh:mm');
+		var nextArrival = moment().add(minutesAway, "minutes").format("hh:mm A");
 
 
     // Create the new row
