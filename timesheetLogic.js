@@ -1,14 +1,14 @@
 
 // 1. Initialize Firebase
 
-const firebaseConfig = {
-    apiKey: "AIzaSyADuJAwrea_JexEx2bS9hS8tknNiHwdmyU",
-    authDomain: "train-schedule-6ad41.firebaseapp.com",
-    databaseURL: "https://train-schedule-6ad41.firebaseio.com",
-    projectId: "train-schedule-6ad41",
+var firebaseConfig = {
+    apiKey: "AIzaSyD61rGz9SaIjhiwuooNpEZyKBoSalzuThc",
+    authDomain: "train-schedule-2-39b62.firebaseapp.com",
+    databaseURL: "https://train-schedule-2-39b62.firebaseio.com",
+    projectId: "train-schedule-2-39b62",
     storageBucket: "",
-    messagingSenderId: "1006413929711",
-    appId: "1:1006413929711:web:4388e40f01c8adbaa98f1a"
+    messagingSenderId: "523731947310",
+    appId: "1:523731947310:web:5640b3902b1e4c4773b4bf"
   };
   
   firebase.initializeApp(firebaseConfig);
@@ -56,7 +56,7 @@ const firebaseConfig = {
 });
 
   
-  // 3. Create Firebase event for adding employee to the database and a row in the html when a user adds an entry
+  // 3. Create Firebase event for adding Trains to the database and a row in the html when a user adds an entry
   database.ref().on("child_added", function(childSnapshot) {
     console.log(childSnapshot.val());
   
@@ -66,7 +66,7 @@ const firebaseConfig = {
     var frequency = childSnapshot.val().start;
     var nextArrival = childSnapshot.val().arrival;
   
-    // Employee Info
+    // Train Info
     console.log(trainName);
     console.log(destination);
     console.log(frequency);
@@ -86,8 +86,8 @@ const firebaseConfig = {
     var newRow = $("<tr>").append(
       $("<td>").text(trainName),
       $("<td>").text(destination),
-      $("<td>").text(frequencyPretty),
-      $("<td>").text(minutesAway),
+    //   $("<td>").text(frequencyPretty),
+    //   $("<td>").text(minutesAway),
       $("<td>").text(nextArrival),
       
     );
